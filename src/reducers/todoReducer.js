@@ -1,4 +1,4 @@
-import {ADD_TODO, REMOVE_TODO} from '../actions/todoAction/ActionTypes';
+import {ADD_TODO, REMOVE_TODO} from '../actions/ActionTypes';
 
 const INITIAL_STATE = {todos: []};
 

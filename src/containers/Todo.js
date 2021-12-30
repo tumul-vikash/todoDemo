@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {AddTodo, RemoveTodo} from '../actions/todoAction/todoActions';
+import {AddTodo, RemoveTodo} from '../actions/todoActions';
 import {styles} from './TodoStyles';
 import {
   Text,
@@ -13,10 +13,11 @@ import {
 
 const Todo = () => {
   const [todoValue, setTodoValue] = useState('');
-
+  
   const dispatch = useDispatch();
   const data = useSelector(state => state);
   const todos = data.todos.todos;
+  
   const addTodo = () => {
     if (todos && !todos.includes(todoValue)) {
       dispatch(AddTodo(todoValue));
